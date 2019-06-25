@@ -1,0 +1,13 @@
+# When connecting directly to a file database like this, you should
+# use the shutdown connection property like this to shut down the DB
+# properly when you exit the JVM.
+
+urlid airsonic-source
+url jdbc:hsqldb:file:/airsonic-workdir/data/source/db/airsonic;shutdown=true
+username SA
+password
+
+urlid airsonic-destination
+url jdbc:hsqldb:file:/airsonic-workdir/data/destination/db/airsonic;shutdown=true
+username SA
+password

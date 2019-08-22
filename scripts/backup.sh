@@ -1,3 +1,4 @@
+#!/bin/sh
 set -e
 
 OUTPUT=/airsonic-workdir/backups/`date +%Y-%m-%d`_airsonic-db.tar

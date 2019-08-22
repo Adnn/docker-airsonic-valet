@@ -1,3 +1,4 @@
+#!/bin/sh
 set -e
 
 # Migrate from the data folder mapped to /airsonic-workdir/data/source to /airsonic-workdir/data/destination

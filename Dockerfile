@@ -5,5 +5,6 @@ RUN apk add curl git openjdk8-jre python tar vim xz
 
 WORKDIR /airsonic-workdir
 COPY sqltool.rc ./
+COPY scripts/ scripts/
 RUN curl -O http://central.maven.org/maven2/org/hsqldb/hsqldb/1.8.0.10/hsqldb-1.8.0.10.jar \
     && git clone https://github.com/Adnn/subsonic_migrate.git

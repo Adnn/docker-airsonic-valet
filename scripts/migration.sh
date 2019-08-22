@@ -1,6 +1,6 @@
 set -e
 
-# Migrate from the data folder mapped to /airsonic-workdir/data/source to /airsonic-workdir/data/destionation
+# Migrate from the data folder mapped to /airsonic-workdir/data/source to /airsonic-workdir/data/destination
 # First load all the .dsv files located in /pre_populate
 alias hsqldb-sqltool="java -cp /airsonic-workdir/hsqldb-1.8.0.10.jar org.hsqldb.util.SqlTool"
 
@@ -12,7 +12,7 @@ hsqldb-sqltool --rcfile /airsonic-workdir/sqltool.rc  airsonic-source /airsonic-
 cd /airsonic-workdir/subsonic_migrate/data/destination
 hsqldb-sqltool --rcfile /airsonic-workdir/sqltool.rc  airsonic-destination /airsonic-workdir/subsonic_migrate/export.sql
 
-## TODO: Change prefix if if needed
+## TODO: Change prefix if needed
 
 cd /airsonic-workdir/subsonic_migrate
 ./main.py
